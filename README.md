@@ -34,5 +34,8 @@ Si tienes sugerencias, mejoras o deseas aportar nuevos análisis, ¡no dudes en 
 ## Licencia
 Este proyecto se distribuye bajo la Licencia MIT.
 
+## Créditos
+- Autor: [@karl](https://x.com/karlbooklover)
+
 ---
 **Última actualización de datos:** 15 de mayo de 2025
