@@ -74,6 +74,45 @@
             text-align: left;
             white-space: nowrap;
         }
+        .chart-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .chart-title {
+            font-size: 14px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .chart {
+            display: flex;
+            align-items: flex-end;
+            height: 100px;
+            border-bottom: 1px solid #ddd;
+            padding: 5px 0;
+            gap: 2px;
+        }
+        .chart-bar {
+            flex: 1;
+            background-color: #2980b9;
+            min-height: 2px;
+            border-radius: 2px 2px 0 0;
+            transition: background-color 0.3s;
+        }
+        .chart-bar:hover {
+            background-color: #3498db;
+        }
+        .chart-info {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-top: 8px;
+        }
     </style>
 </head>
 <body>
@@ -82,12 +121,19 @@
     </div>
     <h1>Estadísticas de Ciberseguridad de Paraguay según Shodan</h1>
     <p class="intro"><b>Shodan es un motor de búsqueda que rastrea dispositivos conectados a internet en todo el mundo. Estos dispositivos pueden ser cámaras, routers, servidores, sensores, entre otros. Este informe presenta cómo está expuesto Paraguay en términos de ciberseguridad.</b></p>
-    <p title="Los rastreadores de Shodan escanean todo internet al menos una vez por semana, actualizando su base de datos en tiempo real. Trabajan 24/7, sondeando continuamente internet en busca de dispositivos y servicios abiertos. Los rastreadores de Shodan no barren rangos de IP; en su lugar, generan aleatoriamente direcciones IP y puertos para verificar. Aunque la frecuencia principal de rastreo es semanal, los usuarios pueden activar escaneos bajo demanda utilizando la API para dispositivos o redes específicas.">Última actualización: 24-05-2025 19:47:41</p>
+    <p title="Los rastreadores de Shodan escanean todo internet al menos una vez por semana, actualizando su base de datos en tiempo real. Trabajan 24/7, sondeando continuamente internet en busca de dispositivos y servicios abiertos. Los rastreadores de Shodan no barren rangos de IP; en su lugar, generan aleatoriamente direcciones IP y puertos para verificar. Aunque la frecuencia principal de rastreo es semanal, los usuarios pueden activar escaneos bajo demanda utilizando la API para dispositivos o redes específicas.">Última actualización: 24-05-2025 19:58:23</p>
 
     <h2 class="section-title">Top 50 Vulnerabilidades</h2>
     <p><b>Vulnerabilidades (CVE)</b></p>
     <p class="description"><i>¿Qué muestra? Una "CVE" es una falla de seguridad conocida. Esta sección lista cuáles son las más comunes en Paraguay.</i></p>
     <p class="description"><i>¿Por qué importa? Si un dispositivo tiene una de estas fallas sin corregir (sin actualizar o sin protección), puede ser hackeado fácilmente. Muchas de estas fallas tienen más de 10 años. Eso significa que hay muchos dispositivos antiguos o mal gestionados que aún están en uso.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -7110%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 89 | Max: 89 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -153,6 +199,13 @@
     <p><b>Proveedores de Internet (ISPs)</b></p>
     <p class="description"><i>¿Qué muestra? Lista las empresas que proveen acceso a internet y cuántos dispositivos <b>con vulnerabilidades conocidas</b> bajo su red están visibles en internet.</i></p>
     <p class="description"><i>¿Por qué importa? Un número alto no es malo por sí solo, pero si esos dispositivos no están protegidos correctamente, pueden ser atacados. Algunos ISPs no aplican suficientes medidas de seguridad.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -294870%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 3686 | Max: 3686 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -218,6 +271,13 @@
     <p><b>Ciudades</b></p>
     <p class="description"><i>¿Qué muestra? Muestra las ciudades paraguayas donde hay más dispositivos <b>con vulnerabilidades conocidas</b> conectados y expuestos en internet.</i></p>
     <p class="description"><i>¿Por qué importa? Donde hay más exposición, también hay más riesgo. Una ciudad con miles de dispositivos visibles en internet tiene mayor probabilidad de sufrir ciberataques masivos o propagación rápida de amenazas.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -272230%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 3403 | Max: 3403 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -283,6 +343,13 @@
     <p><b>Productos</b></p>
     <p class="description"><i>¿Qué muestra? Dispositivos y programas específicos <b>con vulnerabilidades conocidas</b> que están conectados a internet (por ejemplo, cámaras de vigilancia, routers, servidores de bases de datos, etc.).</i></p>
     <p class="description"><i>¿Por qué importa? Algunos productos son muy vulnerables si no se configuran correctamente. Por ejemplo, muchas cámaras o routers vienen con contraseñas débiles de fábrica. Si no se cambian, cualquier persona en internet podría ver esas cámaras o entrar a la red.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -299190%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 3740 | Max: 3740 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -347,6 +414,13 @@
     <p><b>Sistemas Operativos</b></p>
     <p class="description"><i>¿Qué muestra? Los sistemas que usan los dispositivos <b>con vulnerabilidades conocidas</b> conectados (como Windows, Linux, RouterOS, etc.).</i></p>
     <p class="description"><i>¿Por qué importa? Los sistemas desactualizados o no oficiales suelen tener fallas conocidas. Es como dejar abierta una puerta que ya se sabe cómo forzar. Muchos sistemas aquí tienen versiones viejas que ya no reciben actualizaciones de seguridad.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -79030%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 988 | Max: 988 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -412,6 +486,13 @@
     <p><b>Puertos</b></p>
     <p class="description"><i>¿Qué muestra? "Puertos" son como puertas que permiten que los dispositivos <b>con vulnerabilidades conocidas</b> se comuniquen. Esta sección lista los más abiertos en Paraguay.</i></p>
     <p class="description"><i>¿Por qué importa? Algunos puertos son conocidos por ser usados en ataques (como el puerto 23 o 3389). Si están abiertos y mal protegidos, los hackers pueden entrar fácilmente. Cada puerto abierto debe estar justificado y protegido.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -256390%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 3205 | Max: 3205 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -477,6 +558,13 @@
     <p><b>Números de Sistemas Autónomos (ASN)</b></p>
     <p class="description"><i>¿Qué muestra? Cada ASN representa una red de computadoras de un proveedor o empresa. Aquí se muestra cuántos dispositivos <b>con vulnerabilidades conocidas</b> visibles tiene cada red.</i></p>
     <p class="description"><i>¿Por qué importa? Si una red entera está mal configurada, todos sus dispositivos pueden ser atacados o utilizados para lanzar ataques a otros. Es responsabilidad de cada red aplicar buenas prácticas de ciberseguridad.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -294310%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 3679 | Max: 3679 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -542,6 +630,13 @@
     <p><b>Componentes HTTP</b></p>
     <p class="description"><i>¿Qué muestra? Lista de tecnologías usadas para servir páginas web o gestionar conexiones a través de internet en dispositivos <b>con vulnerabilidades conocidas</b>.</i></p>
     <p class="description"><i>¿Por qué importa? Muchos de estos sistemas, si no se actualizan o configuran bien, permiten que atacantes tomen control del sitio web, accedan a información privada o modifiquen el contenido.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -400870%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 5011 | Max: 5011 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -607,6 +702,13 @@
     <p><b>Categorías de Componentes HTTP</b></p>
     <p class="description"><i>¿Qué muestra? Clasifica los componentes HTTP en categorías, mostrando las más frecuentes en Paraguay entre dispositivos <b>con vulnerabilidades conocidas</b>.</i></p>
     <p class="description"><i>¿Por qué importa? Permite identificar tendencias tecnológicas y posibles vectores de ataque según el tipo de tecnología predominante.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -271510%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 3394 | Max: 3394 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -672,6 +774,13 @@
     <p><b>Versiones de SSL/TLS</b></p>
     <p class="description"><i>¿Qué muestra? Enumera las versiones de SSL/TLS detectadas en dispositivos <b>con vulnerabilidades conocidas</b> en Paraguay y su frecuencia.</i></p>
     <p class="description"><i>¿Por qué importa? El uso de versiones obsoletas (ej. SSLv2, SSLv3, TLS 1.0/1.1) representa un riesgo de seguridad significativo.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -209110%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 2614 | Max: 2614 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
@@ -693,6 +802,13 @@
     <p><b>Capturas de Pantalla</b></p>
     <p class="description"><i>¿Qué muestra? Muestra la cantidad de dispositivos <b>con vulnerabilidades conocidas</b> en Paraguay para los cuales Shodan tiene capturas de pantalla disponibles.</i></p>
     <p class="description"><i>¿Por qué importa? Permite visualizar remotamente la interfaz de algunos dispositivos, lo que puede evidenciar configuraciones inseguras o información sensible expuesta.</i></p>
+    <div class="chart-container">
+  <div class="chart-title"> - Últimos 1 días</div>
+  <div class="chart">
+    <div class="chart-bar" style="height: -1990%" title=": "></div>
+  </div>
+  <div class="chart-info">Min: 25 | Max: 25 | Último: </div>
+</div>
     <table class="stats-table">
   <thead>
     <tr>
